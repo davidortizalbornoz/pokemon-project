@@ -25,7 +25,7 @@
                 </mxCell>
                 <mxCell id="M6jgfUpj3zySVkmpqYXh-26" value="if (pokemonObj)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Verdana;fontSize=12;" parent="M6jgfUpj3zySVkmpqYXh-25" vertex="1" connectable="0">
                     <mxGeometry x="-0.1048" relative="1" as="geometry">
-                        <mxPoint x="64" as="offset"/>
+                        <mxPoint x="54" y="-11" as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="7baba1c4bc27f4b0-3" value=":PokeAPI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
