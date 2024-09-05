@@ -7,8 +7,9 @@ import {
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
-import { PokemonService } from './pokemon.service';
-import { Pokemon } from './pokemon.entity';
+import { PokemonService } from '../service/pokemon.service';
+import { Pokemon } from '../model/entity/pokemon.entity';
+import { CreatePokemonDTO } from '../model/dto/pokemon.dto';
 
 @Controller('pokemon')
 export class PokemonController {
@@ -38,20 +39,9 @@ export class PokemonController {
   }
 
   @Post()
-  async create(@Body() pokemonData: Partial<Pokemon>): Promise<Pokemon> {
+  async create(
+    @Body() pokemonData: Partial<CreatePokemonDTO>,
+  ): Promise<Pokemon> {
     return this.pokemonService.create(pokemonData);
-  }
-
-  @Get('pokeapi/:name')
-  async getPokemonFromPokeApi(@Param('name') name: string): Promise<any> {
-    try {
-      const pokemonData = await this.pokemonService.getPokemonFromPokeApi(name);
-      return pokemonData;
-    } catch (error) {
-      throw new HttpException(
-        'Error fetching Pokemon from PokeAPI',
-        HttpStatus.INTERNAL_SERVER_ERROR,
-      );
-    }
   }
 }

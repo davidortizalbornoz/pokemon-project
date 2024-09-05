@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { PokemonController } from './pokemon.controller';
-import { PokemonService } from './pokemon.service';
-import { Pokemon } from './pokemon.entity';
+import { Pokemon } from '../model/entity/pokemon.entity';
+import { PokemonController } from '../controller/pokemon.controller';
+import { PokemonService } from '../service/pokemon.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Pokemon])],
