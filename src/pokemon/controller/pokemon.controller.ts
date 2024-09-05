@@ -39,9 +39,7 @@ export class PokemonController {
   }
 
   @Post()
-  async create(
-    @Body() pokemonData: Partial<CreatePokemonDTO>,
-  ): Promise<Pokemon> {
+  async create(@Body() pokemonData: CreatePokemonDTO): Promise<Pokemon> {
     return this.pokemonService.create(pokemonData);
   }
 }
